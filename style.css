@@ -1,0 +1,88 @@
+@import url("https://fonts.cdnfonts.com/css/gotham");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+  margin: 0;
+  left: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Gotham", sans-serif;
+}
+
+:root {
+  --primary-color: #17181c;
+  --secundary-color: #28a2ff;
+  --terciary-color:#101013;
+  --quartenary-color: #d2d2d2;
+}
+body {
+    background-color: #17181c;
+}
+.nav {
+  background: var(--terciary-color);
+  height: 100%;
+  width: 7rem;
+  position: fixed !important;
+  display: flex;
+  border-right: 0.5px solid var(--quartenary-color);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.275);
+}
+
+.options__nav {
+  margin-top: 5rem;
+  margin-left: 15px ;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.nav__item,
+.nav__item:hover {
+  cursor: pointer;
+  color: var(--secundary-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  margin-right: 3.5rem;
+}
+
+.nav__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, var(--secundary-color), var(--secundary-color));
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.nav__item:hover::before {
+  background-size: 100% 2px;
+}
+
+.section {
+  margin-left: 10rem;
+  width: 45%;
+  color: var(--quartenary-color);
+}
+
+.home {
+  font-size: 1em;
+  padding-top: 80px;
+}
+
+.nome {
+  color: var(--secundary-color);
+}
+
+.tag {
+  padding: 15px;
+  color: #d2d2d25b;
+  font-family: "Satisfy", sans-serif;
+  font-size: 1.2em;
+}
