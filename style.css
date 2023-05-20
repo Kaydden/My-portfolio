@@ -21,20 +21,17 @@ body {
 }
 .nav {
   background: var(--terciary-color);
-  height: 100%;
-  width: 7rem;
-  position: fixed !important;
+  height: 4.5rem;
   display: flex;
-  border-right: 0.5px solid var(--quartenary-color);
-  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.275);
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 0.5px solid var(--primary-color);
+  box-shadow: 0px 1px 0px 0px var(--secundary-color)
 }
-
 .options__nav {
-  margin-top: 5rem;
-  margin-left: 15px ;
+  padding: 5px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
 }
 
 .nav__item,
@@ -43,8 +40,8 @@ body {
   color: var(--secundary-color);
   text-decoration: none;
   font-weight: 500;
+  padding-bottom: 3px;
   position: relative;
-  padding-bottom: 4px;
   margin-right: 3.5rem;
 }
 
@@ -66,23 +63,41 @@ body {
 }
 
 .section {
-  margin-left: 10rem;
-  width: 45%;
+  display: flex;
+  margin-right: 3rem;
+  width: 50%;
   color: var(--quartenary-color);
 }
 
 .home {
-  font-size: 1em;
-  padding-top: 80px;
+  float: right;
+  margin-top: 3.8rem;
+  font-size: 1.1em;
+  position: relative; /* É necessário definir a posição do elemento */
+  z-index: 1; /* Valor maior do que a classe decoration__home */
+}
+
+.init {
+  margin-top: 5rem;
+}
+
+.decoration__home {
+  width: 65%;
+  height: auto;
+  filter: blur(5px) contrast(0.3) opacity(0.4);
+  position: absolute;
+  margin-left: 8rem;
+  float: right;
 }
 
 .nome {
   color: var(--secundary-color);
+  font-size: 1.1em;
 }
 
 .tag {
-  padding: 15px;
+  padding-top: 10px;
   color: #d2d2d25b;
   font-family: "Satisfy", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
