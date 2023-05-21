@@ -19,10 +19,28 @@
 body {
     background-color: #17181c;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--terciary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secundary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secundary-color);
+}
+
 .nav {
   background: var(--terciary-color);
   height: 4.5rem;
   display: flex;
+  position: sticky;
   justify-content: flex-end;
   align-items: center;
   border-bottom: 0.5px solid var(--primary-color);
@@ -64,21 +82,9 @@ body {
 
 .section {
   display: flex;
-  margin-right: 3rem;
-  width: 50%;
+  margin-left: 3rem;
+  width: 60%;
   color: var(--quartenary-color);
-}
-
-.home {
-  float: right;
-  margin-top: 3.8rem;
-  font-size: 1.1em;
-  position: relative; /* É necessário definir a posição do elemento */
-  z-index: 1; /* Valor maior do que a classe decoration__home */
-}
-
-.init {
-  margin-top: 5rem;
 }
 
 .decoration__home {
@@ -88,6 +94,13 @@ body {
   position: absolute;
   margin-left: 8rem;
   float: right;
+}
+
+.home {
+  margin-top: 4rem;
+  font-size: 1.2em;
+  position: relative;
+  z-index: 1;
 }
 
 .nome {
@@ -100,4 +113,18 @@ body {
   color: #d2d2d25b;
   font-family: "Satisfy", sans-serif;
   font-size: 1.5em;
+}
+
+.about {
+  background-color: var(--terciary-color);
+  margin-top: 10rem;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: var(--quartenary-color)
+}
+
+.about__title {
+  padding: 20px;
 }
